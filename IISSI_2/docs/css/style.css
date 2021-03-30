@@ -1,0 +1,26 @@
+/* ======== Grid =======*/
+@import "gridResponsive.css";
+
+/* ======== Form =======*/
+@import "formResponsive.css"; 
+
+/* ======== Nav =======*/
+@import "nav.css"; 
+
+/* ======== Headers =======*/
+@import "cabeceras.css";
+
+/* ======== Cabecera =======*/
+main h1, nav {
+    text-align: center;
+}
+nav{
+    margin-bottom: .5em;
+}
+
+/* ======== Diseño responsive =======*/
+@media only screen and (max-width: 600px) {
+    .gallery-container{
+        grid-template-columns: 100%;
+    }
+}

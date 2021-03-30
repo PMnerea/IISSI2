@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Registro</title>
+        <link rel="icon" href="images/favicon.ico">
+        <meta charset="utf-8">
+        <link rel="stylesheet" type="text/css" href="css/style.css">
+        <script src="js/utils/include.js"></script>
+    </head>
+    <body>
+        <main>
+            <div id="page-header"></div> <!--Incrustar header aqui-->
+            <script>include ("header.html", "#page-header");</script>
+
+            <div id="indexTitle">
+                <h2>Registro</h2>
+            </div>
+
+            <div class="registerForm-container">
+                <form>
+                    <div class="input-group">
+                        <label for="firstname-input">First Name :</label>
+                        <input type="text" id=firstname-input name="firstName" required>
+                    </div>
+
+                    <div class="input-group">
+                        <label for="firstname-input">First Name :</label>
+                        <input type="text" id=firstname-input name="firstName" required>
+                    </div>
+
+                    <div class="input-group">
+                        <label for="lastname-input">Last Name :</label>
+                        <input type="text" id=lastname-input name="lastName" required>
+                    </div>
+
+                    <div class="input-group">
+                        <label for="email-input">Email :</label>
+                        <input type="email" id=email-input name="email" required>
+                    </div>
+
+                    <div class="input-group">
+                        <label for="telephone-input">Telephone :</label>
+                        <select name="prefix" id="prefix-input">
+                            <option value="34">Spain (+34)</option>
+                            <option value="1">USA (+1)</option>
+                            <option value="other">Other</option>
+                        </select>
+                        <input type="text" id=telephone-input name="telephone" required>
+                    </div>
+
+                    <div class="input-group">
+                        <label for="username-input">Email :</label>
+                        <input type="text" id=username-input name="username" required>
+                    </div>
+
+                    <div class="input-group">
+                        <label for="password-input">Password :</label>
+                        <input type="password" id=password-input name="password" required>
+                    </div>
+
+                    <div class="input-group">
+                        <label for="password2-input">Repeat your password :</label>
+                        <input type="password2" id=password2-input name="password2" required>
+                    </div>
+
+                    <div class="input-group">
+                        <input type="submit">
+                    </div>
+                </form>
+            </div>
+
+            <div id="page-footer"></div>
+            <script>include ("footer.html", "#page-footer");</script>
+
+        </main>
+    </body>
+</html>
