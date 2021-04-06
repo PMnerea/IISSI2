@@ -1,0 +1,72 @@
+<!doctype HTML>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="icon" href="images/favicon.ico">
+    <script src="js/utils/include.js"></script>
+	
+	<!-- Diseño RWD, Librerías BootStrap y FontAwesome 
+	
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<link rel="stylesheet" href="/css/bootstrap.min.css">
+	<link rel="stylesheet" href="/css/font-awesome.min.css">
+	<script src="/js/libs/jquery-3.4.1.min.js"> </script>
+	<script src="/js/libs/popper.min.js"></script>
+	<script src="/js/libs/bootstrap.min.js"></script>
+	
+	-->
+
+    <title>Login</title>
+</head>
+<body>
+    <div id="page-header"></div>
+    <div class="?BS">
+		<h2 class="?BS">Login</h2>
+        <div class="?BS">
+            <div id="errors" class="?BS"></div>
+        </div>
+		
+        <form id="login-form">
+            <div class="?BS">
+                <div class="?BS">
+                    <div class="?BS">
+                        <label for="email">Username:</label>
+                        <div class="?BS">
+                            <input required type="text" class="?BS" id="username" name="username"
+                                placeholder="Username">
+                        </div>
+                    </div>
+                </div>
+                <div class="?BS">
+                    <div class="?BS">
+                        <label for="password">Password:</label>
+                        <input required type="password" class="?BS" id="password" name="password"
+                            placeholder="Password">
+                    </div>
+                </div>
+            </div>
+
+            <div class="?BS">
+				<div class="?BS">
+					<button type="button" class= "?BS" onclick="window.location.href=`index.html`">
+						<i class="?FA"></i>Cancel
+					</button>
+					<button type= "submit" class= "?BS">
+						<i class="?FA"></i>Login 
+					</button>
+				</div>
+				
+			</div>
+        </form>
+    </div>
+
+    <div id="page-footer"></div>
+    <script>
+        include("header.html", "#page-header");
+        include("footer.html", "#page-footer");
+    </script>
+    <script type="module" src="js/header.js"></script>
+    <script type="module" src="js/login.js"></script>
+</body>
+</html>

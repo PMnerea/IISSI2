@@ -1,0 +1,66 @@
+<!DOCTYPE html >
+<html >
+<head >
+	<title>Example page</title> 
+	<meta charset="utf-8">
+	<link rel= "icon" href= "/images/favicon.ico">
+	<script src= "/js/utils/include.js"> </script> <!-- Para hacer includes de código HTML en esta página -->
+	
+	<!-- Diseño RWD, Librerías BootStrap y FontAwesome 
+	
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<link rel="stylesheet" href="/css/bootstrap.min.css">
+	<link rel="stylesheet" href="/css/font-awesome.min.css">
+	<script src="/js/libs/jquery-3.4.1.min.js"> </script>
+	<script src="/js/libs/popper.min.js"></script>
+	<script src="/js/libs/bootstrap.min.js"></script>
+	
+	-->
+</head>
+	<body>
+		<div id="page-header"></div> <!-- Incrustar aquí cabecera común header.html con JavaScript -->
+		<script>include ("header.html", "#page-header");</script>
+		<div class="?BS">
+			<div class="?BS">
+				<div class="?BS">
+					<h2 class="?BS">Photo Detail</h2>
+				</div>	
+			</div>
+			<div class="?BS">	
+				<div class= "?BS">
+					<img class="?BS" src= "https://i.ibb.co/tY1Jcnc/wlZCfCv.jpg">
+					<h3>Samoyed</h3>
+					<h6>A very good boy.</h6>
+				</div>
+				<div class="?BS">
+					<div class="?BS">
+						<button class="?BS" onclick="window.history.back()">
+							<i class="?FA"></i>Back
+						</button>
+						<button class="?BS" id="button-edit">
+							<i class="?FA"></i>Edit
+						</button>
+						<button class="?BS" id="button-delete">
+							<i class="?FA"></i>Delete
+						</button>
+					</div>
+					<form class="?BS">
+							<select id="rating-input" name="rating" class="?BS">
+								<option value="0">(0)☆☆☆☆☆</option>
+								<option value="1">(1)★☆☆☆☆</option>
+								<option value="2">(2)★★☆☆☆</option>
+								<option value="3">(3)★★★☆☆</option>
+								<option value="4">(4)★★★★☆</option>
+								<option value="5">(5)★★★★★</option>
+							</select>
+							<button type= "submit" class= "?BS">
+									<i class="?FA"></i>Rate
+							</button>
+					</form>	
+				</div>
+			</div>
+		</div>
+		<div id="page-footer"></div> <!-- Incrustar aquí cabecera común header.html con JavaScript -->
+		<script>include ("footer.html", "#page-footer");</script>
+	</body>
+</html >

@@ -1,102 +1,65 @@
-<!DOCTYPE html>
-<html>
-    <head>
-        <title>Inicio</title>
-        <link rel="icon" href="/docs/images/favicon.ico">
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="stylesheet" type="text/css" href="css/style.css">
-        <script src="js/utils/include.js"> </script>
-    </head>
-    <body>
-        <main>
-            <div id="page-header"></div> <!--Incrustar header aqui-->
-            <script>include ("header.html", "#page-header");</script>
-
-            <div id="indexTitle">
-                <h2>Fotos recientes</h2>
-            </div>
-
-            <nav>
-                <a id="upload">Upload a new picture</a>
-            </nav>
-
-            <section>
-                <div class= "gallery-container"> <!-- Our photo-blocks will be here -->
-                
-                    <div class= "photo-block">
-                        <div class= "photo-header-block">
-                            <h2 class= "photo-title"> Samoyed </h2>
-                            <h3 class= "photo-score"> Score: 3.52 </h3>
-                        </div>
-                        <div class= "photo-image-block">
-                            <img class= "photo-image" src="https://www.dogsnsw.org.au/media/img/BrowseAllBreed/Samoyed-.jpg"> 
-                        </div>
-                        <div class= "photo-metadata-block">
-                            <p class="photo-description">A very good boy.</p>
-                        </div>
-                        <div class="photo-edit-block">
-                            <button class="btnEdit">Edit</button>
-                            <button class="btnDelete">Delete</button>
-                        </div>
-                    </div>
-
-                    <div class= "photo-block">
-                        <div class= "photo-header-block">
-                            <h2 class= "photo-title"> Tortilla </h2>
-                            <h3 class= "photo-score"> Score: 2.95 </h3>
-                        </div>
-                        <div class= "photo-image-block">
-                            <img class= "photo-image" src= "https://free-images.com/md/f7a8/tortilla_spanish_potato_omelette.jpg">
-                        </div>
-                        <div class= "photo-metadata-block">
-                            <p class="photo-description">A typical Spanish tortilla. With onion, of course.</p>
-                        </div>
-                        <div class="photo-edit-block">
-                            <button class="btnEdit">Edit</button>
-                            <button class="btnDelete">Delete</button>
-                        </div>
-                    </div>
-
-                    <div class= "photo-block">
-                        <div class= "photo-header-block">
-                            <h2 class= "photo-title"> Sleepy cat </h2>
-                            <h3 class= "photo-score"> Score: 3.57 </h3>
-                        </div>
-                        <div class= "photo-image-block">
-                            <img class= "photo-image" src= "https://pbs.twimg.com/media/EZ4Z2QDUYAANA-Z?format=png">
-                        </div>
-                        <div class= "photo-metadata-block">
-                            <p class="photo-description">A drawing of a cat about to sleep</p>
-                        </div>
-                        <div class="photo-edit-block">
-                            <button class="btnEdit">Edit</button>
-                            <button class="btnDelete">Delete</button>
-                        </div>
-                    </div>
-
-                    <div class= "photo-block">
-                        <div class= "photo-header-block">
-                            <h2 class= "photo-title"> Seville </h2>
-                            <h3 class= "photo-score"> Score: 4.25 </h3>
-                        </div>
-                        <div class= "photo-image-block">
-                            <img class= "photo-image" src= "https://urbansevilla.es/wp-content/uploads/2019/03/urban-sevilla-foto-ciudad.jpg">
-                        </div>
-                        <div class= "photo-metadata-block">
-                            <p class="photo-description">The beautiful city of Seville.</p>
-                        </div>
-                        <div class="photo-edit-block">
-                            <button class="btnEdit">Edit</button>
-                            <button class="btnDelete">Delete</button>
-                        </div>
-                    </div>
-                </div>
-            </section>
-
-            <div id="page-footer"></div>
-            <script>include ("footer.html", "#page-footer");</script>
-        </main>
-
-    </body>
-</html>
+<!DOCTYPE html >
+<html >
+<head >
+	<title>Example page</title> 
+	<link rel="icon" href="/images/favicon.ico">
+	<script src="/js/utils/include.js"> </script> <!-- Para hacer includes de código HTML en esta página -->
+	
+	<!-- Diseño RWD, Librerías BootStrap y FontAwesome-->
+	
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<link rel="stylesheet" href="/css/bootstrap.min.css">
+	<link rel="stylesheet" href="/css/font-awesome.min.css">
+	<script src="/js/libs/jquery-3.4.1.min.js"> </script>
+	<script src="/js/libs/popper.min.js"></script>
+	<script src="/js/libs/bootstrap.min.js"></script>
+	
+</head>
+	<body>
+		<div id="page-header"></div> <!-- Incrustar aquí cabecera común header.html con JavaScript -->
+		<script>include ("header.html", "#page-header");</script>
+		
+		<div class="container"> <!-- Our photos will be here -->
+			<!--la classe container permet avec BS de créer des marges-->
+			<h2 class="text-center font-weigth-light">Recent photos</h2> <!--titre centré grâce à BS-->
+			<div class="row">
+				<div class="col-sm-3 text-secondary">
+					<!--icone : font-awesomeS y italique : BS-->
+					<i class="fa fa-hand-o-right"><small class="font-italic"> Click photos for details!</small></i>
+				</div>
+				<div id="errors" class="col-sm-9 text-white bg-danger"> Errores </div > <!-- Div de errores para peticiones Ajax a la API REST --> 
+			</div>
+			<div class="row">	<!--grid fe fotos 3xFila-->
+				<div class= "col-sm-4 card">
+					<a href="photo_detail.html"><img class="card-img-top" src="https://i.ibb.co/tY1Jcnc/wlZCfCv.jpg" ></a>
+					<!-- "images/dogs.jpg"  -->
+					<div class="card-body text-center">
+						<h5 class="card-text">Samoyed </h5>
+						<p class="card-text">A very good boy.</p>
+						<p class="card-text">@user1</p>
+					</div>
+				</div>
+				<div class="col-sm-4 card">
+					<a href="photo_detail.html"><img class= "card-img-top" src="https://cdn1.cocina-familiar.com/recetas/thumb/tortilla-de-patata-con-cebolla.jpg" ></a>
+					<!--"images/tortilla.jpg"  -->
+					<div class="card-body text-center">
+						<h5 class="card-text">Spanish tortilla</h5>
+						<p class="card-text">With onion.</p>
+						<p class="card-text">@user2</p>
+					</div>
+				</div>
+				<div class= "col-sm-4 card">
+					<a href="photo_detail.html"><img class="card-img-top" src="https://urbansevilla.es/wp-content/uploads/2019/03/urban-sevilla-foto-ciudad.jpg" ></a>
+					<!--"images/sevilla.jpg"  -->
+					<div class="card-body text-center">
+						<h5 class="card-text">Seville</h5>
+						<p class="card-text">The beautiful city of Seville.</p>
+						<p class="card-text">@user3</p>
+					</div>
+				</div>
+			</div>	
+		</div>
+		<div id="page-footer"></div> <!-- Incrustar aquí cabecera común header.html con JavaScript -->
+		<script>include ("footer.html", "#page-footer");</script>
+	</body>
+</html >

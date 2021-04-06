@@ -1,77 +1,91 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <title>Registro</title>
-        <link rel="icon" href="images/favicon.ico">
-        <meta charset="utf-8">
-        <link rel="stylesheet" type="text/css" href="css/style.css">
-        <script src="js/utils/include.js"></script>
-    </head>
-    <body>
-        <main>
-            <div id="page-header"></div> <!--Incrustar header aqui-->
-            <script>include ("header.html", "#page-header");</script>
+<head>
+	<title>Example page</title>
+	<link rel= "icon" href= "/images/favicon.ico">
+	<script src= "/js/utils/include.js"> </script> <!-- Para hacer includes de código HTML en esta página -->
+	
+	<!-- Diseño RWD, Librerías BootStrap y FontAwesome--> 
+	
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<link rel="stylesheet" href="/css/bootstrap.min.css">
+	<link rel="stylesheet" href="/css/font-awesome.min.css">
+	<script src="/js/libs/jquery-3.4.1.min.js"> </script>
+	<script src="/js/libs/popper.min.js"></script>
+	<script src="/js/libs/bootstrap.min.js"></script>
+	
 
-            <div id="indexTitle">
-                <h2>Registro</h2>
-            </div>
+</head>
+<body>
+	<div id="page-header"></div> <!-- Incrustar aquí cabecera común header.html con JavaScript -->
+	<script>include ("header.html", "#page-header");</script>
+	<div class="container">
+		<h2 class="text-center font-weigth-light">Sign Up</h2>
+		<form id="register-form"> <!-- Control del formulario. Se añade id, utilizado en register.js -->
+			<div class= "row">
+				<div id="errors" class="text-danger"></div>
+			</div>
+			<div class= "row">
+				<div class= "col-sm-6">              
+					<div class="form-group">
+						<label for="firstname-input">First name:</label>
+						<input type="text" class= "form-control" id="firstname-input" name="firstName" required>
+					</div>
+					<div class="form-group">
+						<label for="lastname-input">Last name:</label>
+						<input type="text" class= "form-control" id="lastname-input" name="lastName" required>
+					</div>
+					<div class="form-group">
+						<label for="email-input">
+							<i class="fa fa-envelope"></i> Email:
+						</label>
+						<input type="email" class= "form-control" id="email-input" name="email" required>
+					</div>
+					<div class="form-group">
+						<label for="telephone-input">
+							<i class="fa fa-phone"></i> Telephone:
+						</label>
+							<select name="prefix" id="prefix-input">
+								<option value="34">Spain (+34)</option>
+								<option value="1">USA (+1)</option>
+								<option value="other">Other</option>
+							</select>
+						<input type="text" class= "form-control" id="telephone-input" name="telephone" required>
+					</div>
+				</div>
 
-            <div class="registerForm-container">
-                <form>
-                    <div class="input-group">
-                        <label for="firstname-input">First Name :</label>
-                        <input type="text" id=firstname-input name="firstName" required>
-                    </div>
-
-                    <div class="input-group">
-                        <label for="firstname-input">First Name :</label>
-                        <input type="text" id=firstname-input name="firstName" required>
-                    </div>
-
-                    <div class="input-group">
-                        <label for="lastname-input">Last Name :</label>
-                        <input type="text" id=lastname-input name="lastName" required>
-                    </div>
-
-                    <div class="input-group">
-                        <label for="email-input">Email :</label>
-                        <input type="email" id=email-input name="email" required>
-                    </div>
-
-                    <div class="input-group">
-                        <label for="telephone-input">Telephone :</label>
-                        <select name="prefix" id="prefix-input">
-                            <option value="34">Spain (+34)</option>
-                            <option value="1">USA (+1)</option>
-                            <option value="other">Other</option>
-                        </select>
-                        <input type="text" id=telephone-input name="telephone" required>
-                    </div>
-
-                    <div class="input-group">
-                        <label for="username-input">Email :</label>
-                        <input type="text" id=username-input name="username" required>
-                    </div>
-
-                    <div class="input-group">
-                        <label for="password-input">Password :</label>
-                        <input type="password" id=password-input name="password" required>
-                    </div>
-
-                    <div class="input-group">
-                        <label for="password2-input">Repeat your password :</label>
-                        <input type="password2" id=password2-input name="password2" required>
-                    </div>
-
-                    <div class="input-group">
-                        <input type="submit">
-                    </div>
-                </form>
-            </div>
-
-            <div id="page-footer"></div>
-            <script>include ("footer.html", "#page-footer");</script>
-
-        </main>
-    </body>
+				<div class= "col-sm-6"> 	
+					<div class="form-group">
+						<label for="username-input">Username:</label>
+						<input type="text" class= "form-control" id="username-input" name="username" required>
+					</div>
+					<div class="form-group">
+						<label for="password-input">Password:</label>
+						<input type="password" class= "form-control" id="password-input" name="password" required >
+					</div>
+					<div class="form-group">
+						<label for="password2-input">Repeat your password:</label>
+						<input type="password" class= "form-control" id="password2-input" name="password2" required>
+					</div>
+				</div>				 
+			</div> 					 
+			
+			<div class= "row">
+				<div class="col">
+					<button type= "button" class= "btn btn-danger" onclick="window.location.href=`index.html`">
+						<i class="fa fa-close"></i> Cancel
+					</button>
+					<button type= "submit" class= "btn btn-primary">
+						<i class="fa fa-sign-in"></i> Sign Up
+					</button>
+				</div>
+				
+			</div>
+		</form>	
+	</div>
+	<div id="page-footer"></div> <!-- Incrustar aquí pie común footer.html con JavaScript -->
+	<script>include ("footer.html", "#page-footer");</script>
+	<script src= "js/header.js" type= "module"> </script> <!-- 7.1 Añadido para controlar la cabecera -->
+	<script src="js/register.js" type="module"></script> <!-- Gestión del formulario -->	
+	</body>
 </html>
